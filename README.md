@@ -18,5 +18,5 @@ sudo docker-compose up -d
 Note: Using the default configuration.
 
 ~~~
-psql --port 5433 --protocol tcp -u root -pdarkstardb
+psql --port 5433 --host 127.0.0.1 --user postgres
 ~~~
