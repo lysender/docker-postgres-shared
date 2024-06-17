@@ -16,6 +16,16 @@ services:
           nocopy: true
     networks:
       - localnet
+  admin:
+    image: dpage/pgadmin4:8.8
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "${PGADMIN_DEFAULT_EMAIL}"
+      PGADMIN_DEFAULT_PASSWORD: "${PGADMIN_DEFAULT_PASSWORD}"
+    ports:
+      - "${PGADMIN_PORT_MAPPING}"
+    networks:
+      - localnet
 volumes:
   data:
 networks:
